@@ -5,7 +5,16 @@ import "../styles/Developer.css";
 const skillGroups = [
   {
     label: "Frontend",
-    skills: ["React", "React Native", "Expo", "Next.js", "TypeScript", "JavaScript ES6+", "TanStack Query", "Vite"],
+    skills: [
+      "React",
+      "React Native",
+      "Expo",
+      "Next.js",
+      "TypeScript",
+      "JavaScript ES6+",
+      "TanStack Query",
+      "Vite",
+    ],
   },
   {
     label: "Backend",
@@ -17,7 +26,14 @@ const skillGroups = [
   },
   {
     label: "AI / ML",
-    skills: ["LLM Fine-Tuning", "Prompt Engineering", "RAG", "TensorFlow", "HuggingFace", "Jupyter Notebook"],
+    skills: [
+      "LLM Fine-Tuning",
+      "Prompt Engineering",
+      "RAG",
+      "TensorFlow",
+      "HuggingFace",
+      "Jupyter Notebook",
+    ],
   },
   {
     label: "General",
@@ -26,10 +42,23 @@ const skillGroups = [
 ];
 
 const featuredSkills = [
-  "React", "Next.js", "TypeScript", "TanStack Query", "Vite",
-  "Node.js", "Express", "Python",
-  "Supabase", "PostgreSQL", "MongoDB",
-  "LLM Fine-Tuning", "Prompt Engineering", "RAG", "TensorFlow", "HuggingFace", "Jupyter Notebook",
+  "React",
+  "Next.js",
+  "TypeScript",
+  "TanStack Query",
+  "Vite",
+  "Node.js",
+  "Express",
+  "Python",
+  "Supabase",
+  "PostgreSQL",
+  "MongoDB",
+  "LLM Fine-Tuning",
+  "Prompt Engineering",
+  "RAG",
+  "TensorFlow",
+  "HuggingFace",
+  "Jupyter Notebook",
 ];
 
 const projects = [
@@ -121,7 +150,15 @@ const projects = [
   },
 ];
 
-const categories = ["All", "React + Vite", "AI / NLP", "AI / ML", "Node.js", "Supabase + SQL", "UX / Figma"];
+const categories = [
+  "All",
+  "React + Vite",
+  "AI / NLP",
+  "AI / ML",
+  "Node.js",
+  "Supabase + SQL",
+  "UX / Figma",
+];
 
 const orgs = [
   {
@@ -168,12 +205,12 @@ const DeveloperTab = () => {
         <div className="about-card">
           <p className="about-text">
             Full stack developer based in Seattle, WA with hands-on experience
-            building across the entire stack — React interfaces, REST APIs, Node.js
-            servers, Python pipelines, and cloud-backed databases. I build
-            practical, production-ready software with a strong focus on clean
-            architecture, data integrity, and applied AI. My work spans web
-            applications, machine learning pipelines, LLM fine-tuning, and language
-            preservation technology.
+            building across the entire stack — React interfaces, REST APIs,
+            Node.js servers, Python pipelines, and cloud-backed databases. I
+            build practical, production-ready software with a strong focus on
+            clean architecture, data integrity, and applied AI. My work spans
+            web applications, machine learning pipelines, LLM fine-tuning, and
+            language preservation technology.
           </p>
           <div className="about-stats">
             {[
@@ -194,7 +231,13 @@ const DeveloperTab = () => {
         <SectionLabel>Organizations</SectionLabel>
         <div className="orgs-grid">
           {orgs.map(({ name, role, href }) => (
-            <a key={name} href={href} target="_blank" rel="noreferrer" className="org-card">
+            <a
+              key={name}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="org-card"
+            >
               <div className="org-name">{name}</div>
               <div className="org-role">{role}</div>
             </a>
@@ -206,10 +249,18 @@ const DeveloperTab = () => {
         <SectionLabel>Certifications</SectionLabel>
         <div className="certs-grid">
           {certs.map(({ name, sub, issuer, status, href }) => (
-            <a key={sub} href={href} target="_blank" rel="noreferrer" className="cert-card">
+            <a
+              key={sub}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="cert-card"
+            >
               <div className="cert-top">
                 <div className="cert-name">{name}</div>
-                <span className={`cert-status ${status === "in progress" ? "in-progress" : "earned"}`}>
+                <span
+                  className={`cert-status ${status === "in progress" ? "in-progress" : "earned"}`}
+                >
                   {status}
                 </span>
               </div>
@@ -266,10 +317,17 @@ const DeveloperTab = () => {
                 <p className="project-desc">{p.desc}</p>
                 <div className="project-stack">
                   {p.stack.map((s) => (
-                    <span key={s} className="stack-pill">{s}</span>
+                    <span key={s} className="stack-pill">
+                      {s}
+                    </span>
                   ))}
                 </div>
-                <a href={p.href} target="_blank" rel="noreferrer" className="project-link">
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
                   View Code
                 </a>
               </div>
@@ -277,7 +335,9 @@ const DeveloperTab = () => {
                 <div className="highlights-box">
                   <div className="highlights-label">Highlights</div>
                   {p.highlights.map((h) => (
-                    <div key={h} className="highlight-item">— {h}</div>
+                    <div key={h} className="highlight-item">
+                      — {h}
+                    </div>
                   ))}
                 </div>
               )}
@@ -285,7 +345,7 @@ const DeveloperTab = () => {
           ))}
         </div>
         <div className="view-all">
-          
+          <a
             href="https://github.com/makayo?tab=repositories"
             target="_blank"
             rel="noreferrer"
